@@ -65,7 +65,7 @@ password-generator/
 
 - **Umesh Sharma** - [GitHub](https://github.com/Umesh358)
 
-- **LinkedIn** - [www.linkedin.com/in/umesh-sharma-10a465382]
+- **LinkedIn** - [Click Me](www.linkedin.com/in/umesh-sharma-10a465382)
 
 ---
 
