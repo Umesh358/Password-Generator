@@ -1,0 +1,192 @@
+/* Base Reset & Variables */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #3498db;
+    --success: #27ae60;
+    --dark: #2c3e50;
+    --bg-gray: #f8f9fa;
+    --border-color: #e9ecef;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* --- Grouped Header & Footer Styles --- */
+.header, .footer {
+    text-align: center;
+    padding: 20px;
+}
+
+.header {
+    background: var(--dark);
+    color: white;
+}
+
+.header h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.header p, .footer p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.footer {
+    background: var(--bg-gray);
+    color: #7f8c8d;
+}
+
+/* --- Main Layout (Using GAP instead of Margins) --- */
+.main {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* This single line replaces all the individual margin-bottoms! */
+}
+
+.password-display {
+    background: var(--bg-gray);
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    padding: 18px;
+    font-size: 1.4rem;
+    font-family: monospace;
+    letter-spacing: 2px;
+    min-height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    word-break: break-all;
+}
+
+.password-display:empty::before {
+    content: "Your password will appear here...";
+    color: #adb5bd;
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --- Strength Indicator --- */
+.strength {
+    display: flex;
+    gap: 8px;
+    margin-top: -15px; /* Pulls it closer to the display box */
+}
+
+.strength-bar {
+    flex: 1;
+    height: 8px;
+    border-radius: 4px;
+    background: var(--border-color);
+    transition: all 0.3s;
+}
+
+.strength-bar.filled {
+    background: var(--success);
+}
+
+.strength-text {
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: -15px;
+}
+
+/* --- Length Controls --- */
+.length-control label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+input[type="range"] {
+    flex: 1;
+    accent-color: var(--primary);
+}
+
+.length-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary);
+    min-width: 40px;
+    text-align: center;
+}
+
+/* --- Checkbox Options --- */
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.option-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: var(--dark);
+    font-size: 16px;
+}
+
+.option-label input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    accent-color: var(--primary);
+}
+
+/* --- Buttons --- */
+.btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+/* Combined hover state saves writing darker colors manually */
+.btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(0.9);
+}
+
+.generate-btn {
+    background: var(--success);
+}
+
+.copy-btn {
+    background: var(--primary);
+    margin-top: -10px;
+}

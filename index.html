@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A clean, beginner-friendly password generator built with pure HTML, CSS & JavaScript">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔑 Password Generator</h1>
+            <p>Made with ❤️ using HTML + CSS + JS</p>
+        </div>
+
+        <div class="main">
+            <div id="password-display" class="password-display"></div>
+
+            <div id="strength-container" class="strength" style="display: none;">
+                <div id="bar1" class="strength-bar"></div>
+                <div id="bar2" class="strength-bar"></div>
+                <div id="bar3" class="strength-bar"></div>
+            </div>
+            <div id="strength-text" class="strength-text" style="display: none;"></div>
+
+            <div class="length-control">
+                <label>Password Length: <span id="length-value">12</span></label>
+                <div class="slider-container">
+                    <input type="range" id="length-slider" min="6" max="30" value="12">
+                    <span id="length-value-display" class="length-value">12</span>
+                </div>
+            </div>
+
+            <div class="options">
+                <label class="option-label">
+                    <input type="checkbox" id="uppercase" checked> Include Uppercase Letters (A-Z)
+                </label>
+                <label class="option-label">
+                    <input type="checkbox" id="lowercase" checked> Include Lowercase Letters (a-z)
+                </label>
+                <label class="option-label">
+                    <input type="checkbox" id="numbers" checked> Include Numbers (0-9)
+                </label>
+                <label class="option-label">
+                    <input type="checkbox" id="symbols" checked> Include Symbols (!@#$%^&* etc.)
+                </label>
+            </div>
+
+            <button id="generate-btn" class="btn generate-btn">🚀 Generate Password</button>
+            <button id="copy-btn" class="btn copy-btn">📋 Copy to Clipboard</button>
+        </div>
+
+        <div class="footer">
+            <p>Beginner friendly • No external libraries • Works offline</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
