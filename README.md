@@ -7,6 +7,9 @@ A clean, modern, and beginner-friendly password generator built with pure HTML, 
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
 ![Password Generator Preview](https://via.placeholder.com/800x500/667eea/ffffff?text=Password+Generator+Screenshot)
+
+---
+
 ## ✨ Features
 
 - **Customizable Length:** Adjustable password length (6–30 characters).
@@ -16,10 +19,13 @@ A clean, modern, and beginner-friendly password generator built with pure HTML, 
 - **UX/UI Touches:** One-click copy to clipboard with visual confirmation and keyboard support (Press **Enter** to generate).
 - **Responsive & Offline:** Fully responsive design that works completely offline.
 
+---
+
 ## 🚀 Live Demo
 
-[View Live Demo](https://yourusername.github.io/password-generator)
-*(Enable GitHub Pages after uploading)*
+[View Live Demo](https://Umesh358.github.io/Password-Generator)
+
+---
 
 ## 🧠 What I Learned
 
@@ -29,6 +35,8 @@ Building this project helped reinforce core frontend concepts, specifically:
 * **Array & String Methods:** Utilizing `Math.random()`, `.split()`, `.sort()`, and `.join()` to shuffle characters and generate secure strings.
 * **CSS Flexbox:** Structuring a clean, responsive layout using modern CSS properties like `gap` and CSS variables for consistent theming.
 
+---
+
 ## 📂 Project Structure
 
 ```text
@@ -37,12 +45,16 @@ password-generator/
 ├── styles.css
 ├── script.js
 └── README.md
+```
+
+---
 
 ## 🧪 How to Use Locally
 1. Clone the repository:
+```
+   git clone [https://github.com/Umesh358/Password-Generator.git](https://github.com/Umesh358/Password-Generator.git)
+   ```
 
-Bash
-git clone [https://github.com/yourusername/password-generator.git](https://github.com/yourusername/password-generator.git)
-Open index.html in your browser (double-click or use an extension like VS Code Live Server).
+2. Open index.html in your browser (double-click or use an extension like VS Code Live Server).
 
-Adjust your settings and click Generate Password 🚀
+3. Adjust your settings and click Generate Password 🚀
