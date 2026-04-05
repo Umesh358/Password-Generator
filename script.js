@@ -121,6 +121,9 @@ function showStrength(length, activeTypesCount) {
     }
 }
 
+// Variable to store our timer so we can cancel it if needed
+let copyTimer;
+
 // Copy password to clipboard
 copyBtn.addEventListener('click', function() {
     const password = passwordDisplay.textContent;
@@ -131,14 +134,19 @@ copyBtn.addEventListener('click', function() {
     }
 
     navigator.clipboard.writeText(password).then(() => {
-        const originalText = copyBtn.textContent;
+        // 1. If they click fast, cancel the previous countdown!
+        clearTimeout(copyTimer);
+
+        // 2. Change button appearance
         copyBtn.textContent = '✅ Copied!';
         copyBtn.style.background = '#27ae60';
 
-        setTimeout(() => {
-            copyBtn.textContent = originalText;
+        // 3. Start a fresh 2-second countdown
+        copyTimer = setTimeout(() => {
+            copyBtn.textContent = '📋 Copy to Clipboard'; // Hardcoded reset
             copyBtn.style.background = 'var(--primary)';
-        }, 2000);
+        }, 1000);
+
     }).catch(() => {
         alert("❌ Could not copy (try another browser)");
     });
